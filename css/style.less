@@ -457,8 +457,8 @@ footer{
     .styles-flex{
       margin: 0 auto;
       display: flex;
-      width: 60vw;
-      height: 130vw;
+      width: 70vw;
+      height: 150vw;
       justify-content: center;
       align-items: center;
       flex-direction: column;
@@ -483,15 +483,21 @@ footer{
       &-buttons{
         width: 80%;
         &-wrap{
-          padding-bottom: 2px;
-          padding-top: 2px;
+          display: grid;
+          align-items: start;
+          grid-template-columns: 1fr 1fr;
+          grid-auto-rows: 1fr 1fr;
           width: 100%;
           background: none;
           height: 31vw;
+          padding: 2px 0;
         }
         .style-btn {
-          margin: 2px 0;
+          width: 100%;
+          height: 70%;
           font-size: 16px;
+          padding: 0;
+          margin: 0 !important;
         }
       }
     }
