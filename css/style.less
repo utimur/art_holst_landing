@@ -8,7 +8,7 @@
 }
 @container-padding: 50px;
 @container-padding-small-pc: 25px;
-@container-padding-small-phone: 5px;
+@container-padding-small-phone: 10px;
 
 
 .up-btn{
@@ -451,6 +451,36 @@ footer{
 
   }
   main {
+    .about-flex{
+      padding: 0 @container-padding-small-phone !important;
+      width: 100%;
+      &-header{
+        font-size: 50px !important;
+        font-weight: 700;
+        text-align: center;
+      }
+      &-description-block{
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        font-size: 20px;
+        &-right{
+          width: 100%;
+          font-weight: 500;
+        }
+        h1 {
+          text-align: center;
+          font-size: 30px !important;
+          font-weight: 900;
+        }
+        img{
+          height: 100%;
+          width: 100%;
+          margin-right: 10px;
+        }
+      }
+    }
     .styles{
       justify-content: center;
     }

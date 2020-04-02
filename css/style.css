@@ -417,6 +417,36 @@ footer .footer-flex .info-about-me a {
   color: white;
 }
 @media screen and (max-width: 425px) {
+  main .about-flex {
+    padding: 0 10px !important;
+    width: 100%;
+  }
+  main .about-flex-header {
+    font-size: 50px !important;
+    font-weight: 700;
+    text-align: center;
+  }
+  main .about-flex-description-block {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  main .about-flex-description-block-right {
+    width: 100%;
+    font-weight: 500;
+  }
+  main .about-flex-description-block h1 {
+    text-align: center;
+    font-size: 30px !important;
+    font-weight: 900;
+  }
+  main .about-flex-description-block img {
+    height: 100%;
+    width: 100%;
+    margin-right: 10px;
+  }
   main .styles {
     justify-content: center;
   }
@@ -428,7 +458,7 @@ footer .footer-flex .info-about-me a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 5px;
+    padding: 0 10px;
     background-image: url("../img/iphone.png");
     background-repeat: no-repeat;
     background-position: center center;
