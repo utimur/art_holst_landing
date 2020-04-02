@@ -42,6 +42,7 @@ instaBtn.onclick = () => {
 function changeStyleImg(left,right,img,count,fileName){
     let clickCount = 1;
     rightBtn.disabled = false
+    rightBtn.style.visibility = "visible"
     if(clickCount == 1)
     {
         left.disabled = true;

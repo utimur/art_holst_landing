@@ -17,8 +17,8 @@
 
 <header id="header">
     <div class="header-flex">
-        <button class="header-btn">меню</button>
-        <a class="header-logo">ART <span class="header-logo-letter">HOLST</span></a>
+        <button class="header-btn" id="header-btn"></button>
+        <span class="header-logo">ART <span class="header-logo-letter">HOLST</span></span>
         <a  href="#about" class="header-flex-anchor">О нас</a>
         <a  href="#holst" class="header-flex-anchor">Холсты</a>
         <a href="#styles" class="header-flex-anchor">Стили</a>
@@ -27,12 +27,17 @@
 </header>
 
 <nav>
-
+    <div class="nav-flex" id="menu">
+        <a  href="#about" class="header-flex-anchor">О нас</a>
+        <a  href="#holst" class="header-flex-anchor">Холсты</a>
+        <a href="#styles" class="header-flex-anchor">Стили</a>
+        <a  href="#contacts" class="header-flex-anchor">Контакты</a>
+    </div>
 </nav>
 
 <main>
     <div class="art-holst">
-        <button><a href="#contacts">Заказать</a></button>
+        <button><a href="#order">Заказать</a></button>
     </div>
 
     <div class="about-flex" id="about">
@@ -53,18 +58,20 @@
     </div>
 
     <div class="holst-flex" id="holst">
-        <p class="holst-flex-header">Холсты</p>
         <div class="holst-flex-price">
-            <img src="img/holsts.jpg">
-            <div class="holst-flex-price-desc">
-                <p class="holst-flex-price-desc-header">Размеры и цены</p>
-                <p>Стоимость портретов зависит от выбранного вами стиля и размера</p>
-                <p>Стандартные размеры:</p>
-                30x40 см - 2290р. ( стиль GTA + 300р) <br>
-                40x60 см - 2990р. ( стиль GTA + 300р) <br>
-                60x80 см - 3490р. ( стиль GTA + 300р) <br>
-                <p></p>
-                <p>Другие размеры обговариваются индивидуально.</p>
+            <p class="holst-flex-header">Холсты</p>
+            <div class="holst-flex-wrap">
+                <img src="img/holsts.png">
+                <div class="holst-flex-price-desc">
+                    <p class="holst-flex-price-desc-header">Размеры и цены</p>
+                    <p>Стоимость портретов зависит от выбранного вами стиля и размера</p>
+                    <p>Стандартные размеры:</p>
+                    30x40 см - 2290р. ( стиль GTA + 300р) <br>
+                    40x60 см - 2990р. ( стиль GTA + 300р) <br>
+                    60x80 см - 3490р. ( стиль GTA + 300р) <br>
+                    <p></p>
+                    <p>Другие размеры обговариваются индивидуально.</p>
+                </div>
             </div>
         </div>
         <div class="holst-flex-natural">
@@ -101,8 +108,8 @@
                 </div>
             </div>
             <div class="styles-flex-img">
-                <button id="style-left"><-</button>
-                <button id="style-right">-></button>
+                <button id="style-left"></button>
+                <button id="style-right"></button>
             </div>
         </div>
     </div>
@@ -110,11 +117,11 @@
     <div class="contacts" id="contacts">
         <p class="holst-flex-header">Контакты</p>
         <div class="contacts-img"></div>
-        <div class="contacts-flex">
+        <div class="contacts-flex" id="order">
             <div class="contacts-flex-img"></div>
             <div class="contacts-flex-desc">
                 <p class="contacts-flex-desc-header">Как заказать?</p>
-                <div>
+                <div >
                     <p>Для заказа портрета на холсте обращаться:</p>
                     <p>Email: art_holst_photo@mail.ru</p>
                     <p>Instagram: @art_holst_photo</p>

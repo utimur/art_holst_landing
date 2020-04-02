@@ -7,6 +7,8 @@
   src: url("../fonts/689_rubik/Rubik-Black.ttf");
 }
 @container-padding: 50px;
+@container-padding-small-pc: 25px;
+@container-padding-small-phone: 5px;
 
 
 .up-btn{
@@ -22,19 +24,25 @@
   border: none;
   outline: none;
   transition: all 1s;
-  //&:hover{
-  //  width: 60px;
-  //  height: 60px;
-  //}
+  &:hover, &:active{
+    //width: 60px;
+    //height: 60px;
+    outline: none;
+  }
 }
 
 header{
   width: 100%;
   background-color: white;
   box-shadow: 0px 2px 9px 0px rgba(57, 59, 50, 1);
+
+
   .header-flex{
+
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     padding: 0 @container-padding;
     .header-logo {
       font-family: Portico;
@@ -67,15 +75,16 @@ header{
 }
 
 nav{
-
+  display: none;
 }
 
 main{
+  padding-top: 3px;
   .art-holst{
     display: flex;
     width: 100%;
     height: 40vw;
-    margin: 2px 0;
+    padding: 10px 0;
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
@@ -88,30 +97,30 @@ main{
     align-items: flex-end;
     button{
       height: 50px;
-      color: black;
+      color: white;
       font-size: 28px;
       margin-right: 40px;
-      margin-bottom: 20px;
-      border-radius: 10px;
       font-weight: 900;
       border: none;
       padding: 0 30px;
-      background-color: white;
+      background-color: black;
       transition: all 1s;
+      border-radius: 30px ;
       a{
         outline: none;
         color: inherit;
         text-decoration: none;
       }
       &:hover{
-        background-color: black;
-        color: white;
-        border-radius: 30px ;
+        border-radius: 10px;
+
+        background-color: white;
+        color: black;
       }
     }
   }
   .about-flex{
-    margin-top: 50px;
+    margin: 50px 0;
     padding: 0 @container-padding;
     &-header{
       font-size: 70px;
@@ -140,18 +149,28 @@ main{
     }
   }
   .holst-flex{
-    padding: 0 @container-padding;
     font-size: 20px;
-
     &-header{
       font-size: 70px;
       font-weight: 700;
       text-align: center;
     }
-    &-price{
+    .holst-flex-wrap{
       display: flex;
-      margin-top: 20px;
       justify-content: space-around;
+    }
+    &-price{
+      padding: 0 @container-padding;
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-image: url("../img/background.jpg");
       img{
         width: 40%;
         height: 40%;
@@ -162,7 +181,7 @@ main{
         display: flex;
         flex-direction: column;
         width: 50%;
-        font-weight: 500;
+        font-weight: 700;
         &-header {
           text-align: center;
 
@@ -173,9 +192,9 @@ main{
     }
 
     &-natural{
+      padding: 30px @container-padding;
       display: flex;
       justify-content: space-between;
-      padding: 30px 0;
       img{
         width: 40%;
         height: 40%;
@@ -200,6 +219,14 @@ main{
       display: flex;
       flex-direction: column;
       align-items: center;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-image: url("../img/background.jpg");
+      padding-bottom: 30px;
       &-header {
         font-size: 70px;
         font-weight: 700;
@@ -216,9 +243,10 @@ main{
         -o-background-size: cover;
         background-size: cover;
         background-image: url("../img/galery.jpg");
-        width: 76%;
+        width: 70%;
         height: 39vw;
         transition: 2s;
+        border: 3px solid black;
 
         button {
           width: 50%;
@@ -255,6 +283,25 @@ main{
       display: flex;
       justify-content: space-between;
       align-items: center;
+      button{
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 15%;
+        height: 6vw;
+        background-color: transparent;
+        border: none;
+        margin: 0 5px;
+      }
+      #style-left{
+        background-image: url("../img/left.png");
+      }
+      #style-right{
+        background-image: url("../img/right.png");
+      }
     }
     &-buttons{
       display: flex;
@@ -264,14 +311,20 @@ main{
       width: 40%;
       transition: all 1s;
       &-wrap{
-        width: 50%;
+        width: 18vw;
+        height: 37vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: black solid 3px;
-        border-radius: 30px;
-        padding: 30px 50px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-image: url("../img/iphone.png");
+        padding: 30px 20px;
       }
       .style-btn {
         margin-bottom: 10px;
@@ -303,11 +356,12 @@ main{
       background-size: cover;
       background-image: url("../img/gta1.jpg");
       transition: all 1s;
-      width: 40%;
-      height: 40vw;
+      width: 37%;
+      height: 37vw;
     }
   }
   .contacts{
+    margin-top: 50px;
     &-img{
       background-repeat: no-repeat;
       background-position: center center;
@@ -317,7 +371,7 @@ main{
       background-size: cover;
       background-image: url("../img/main-img.jpg");
       width: 100%;
-      height: 45vw;
+      height: 40vw;
     }
     &-flex{
       padding: 70px @container-padding;
@@ -392,24 +446,140 @@ footer{
 
 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
+  header{
 
+  }
+  main {
+    .styles{
+      justify-content: center;
+    }
+    .styles-flex{
+      margin: 0 auto;
+      display: flex;
+      width: 60vw;
+      height: 130vw;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 @container-padding-small-phone;
+      background-image: url("../img/iphone.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      &-img{
+          order: -1;
+        justify-self: flex-start;
+        width: 90%;
+        height: 45vh;
+        border-radius: 0;
+        button{
+
+        }
+      }
+      &-buttons{
+        width: 80%;
+        &-wrap{
+          padding-bottom: 2px;
+          padding-top: 2px;
+          width: 100%;
+          background: none;
+          height: 31vw;
+        }
+        .style-btn {
+          margin: 2px 0;
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 
 @media  screen and (max-width: 768px) {
   header{
+    position: fixed;
+    z-index: 99999;
     .header-flex{
       margin: 0 5px;
-      justify-content: space-between;
-      .header-logo {
-        font-size: 36px;
-
+      padding: 0;
+      justify-content: flex-end !important;
+      .header-logo{
+        margin: 0 0 0 auto;
       }
       .header-btn{
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-image: url("../img/menu-btn.png");
+        width: 40px;
+        height: 40px;
         display: block;
-        padding: 0;
         background-color: transparent;
-        border:none;
+        border: none;
+      }
+      a{
+        display: none;
+      }
+    }
+  }
+  nav{
+    position: sticky;
+    display: block;
+    .nav-flex {
+      margin-top: 60px;
+      height: 100vh;
+      width: 50%;
+      background-color: #f046e7;
+      position: fixed;
+      transition: all 0.7s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      transform: translateX(-100%);
+      z-index: 9999;
+    }
+  }
+}
+
+@media  screen and (max-width: 1024px) {
+  header{
+    .header-flex{
+      padding: 0 @container-padding-small-pc;
+    }
+    .header-logo{
+      font-size: 40px !important;
+    }
+    a{
+      font-size: 22px !important;
+    }
+  }
+  main{
+    .about-flex{
+      padding: 0 @container-padding-small-pc;
+    }
+    .holst-flex-price{
+      padding: 0 @container-padding-small-pc;
+    }
+
+    .contacts-flex{
+      padding: 70px @container-padding-small-pc;
+    }
+    .holst-flex-natural{
+      padding: 30px @container-padding-small-pc;
+      p:last-child{
+        display: none;
+      }
+    }
+    .podramnik-flex{
+      button{
+        font-size: 20px !important;
       }
     }
   }

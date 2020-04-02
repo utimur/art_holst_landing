@@ -1,5 +1,17 @@
 const upBtn = document.getElementsByClassName("up-btn")[0]
 const anchors = document.getElementsByClassName("header-flex-anchor")
+const menuBtn = document.getElementById("header-btn")
+const menu = document.getElementById("menu")
+var menuBtnClickCount  = 1
+
+menuBtn.onclick = () => {
+    menuBtnClickCount++
+    if(menuBtnClickCount % 2 == 0) {
+        menu.style.transform = "translateX(0%)"
+    } else {
+        menu.style.transform = "translateX(-100%)"
+    }
+}
 
 upBtn.onclick = () => {
     // window.scrollTo(0,0)
